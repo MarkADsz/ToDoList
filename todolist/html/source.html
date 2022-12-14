@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/costum.css">
+   <!-- fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Ubuntu&display=swap" rel="stylesheet">
+   <script src="../js/main.js"></script>
+   <!-- /fonts -->
+
+   <!-- responsive -->
+   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta name="HandheldFriendly" content="true">
+   <!-- /responsive -->
+   <title>Document</title>
+</head>
+<body>
+   <main>
+
+      <form id="new-form-insert" class="bar" novalidate>
+         <div class="search-wrapper">
+            
+            <input class="search " id="myInput" type="text" name="content" placeholder=" " required="required">
+            <div id="req" class="req_placeholder"></div>
+         </div>
+         <input type="submit" class="myButton plus-btn" id="task-insert" value="ADD" hidden/>
+         <input type="submit" class="myButton plus-btn" id="task-edit" value="EDIT" hidden/>
+         <input type="submit" class="myButton plus-btn" id="task-nothing" value=" " disabled />
+         <!-- <div class="myButton">
+            <button class="plus-btn" id="addToDo">
+               <span class="plus-sign">&#43;</span>
+            </button>
+         </div> -->
+      </form>
+      <div class="tasks" id="containerToDo">
+         <!-- <div class="newtask">
+            <input type="checkbox" class="mycheckbox">
+            <input type="text" class="text" value="MyShinyTask" readonly>
+            <div class="actions">
+               <button class="check-btn myButton" >&#10003;</button>
+               <button class="delete-btn myButton" >-</button>
+            </div> 
+         </div> -->
+      </div>
+   </main>
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <script>
+      var typed = new Typed('.req_placeholder', {
+            strings: ["Take out the trash", "Call grandma", "Buy some fruit", "Buy Christmas presents"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop:true
+         })
+   </script>
+</body>
+</html>
