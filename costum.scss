@@ -444,7 +444,7 @@ input[required="required"]:valid+.req_placeholder {
                width: 12vw;
                   height: 3vh;
                   line-height: 2vh;
-               font-size: calc(2em + 0.1vw);
+               font-size: calc(2em + 0vw);
                   //  font-size: 2vh;
                }
 
@@ -488,6 +488,7 @@ input[required="required"]:valid+.req_placeholder {
             width: calc(5vw + 1rem);
             height: calc(2vh + 1rem);
             font-size: calc(1vw + 1vh);
+            
             margin-bottom: 2rem;
             text-align: center;
             color: #f9f9f9;
