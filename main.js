@@ -112,7 +112,7 @@ function DisplayTodos(){
          deleteBtnElement.classList.add("delete-btn");
          deleteBtnElement.innerHTML="-";
 
-         taskActionsElement.appendChild(checkBtnElement);
+         //taskActionsElement.appendChild(checkBtnElement);
          taskActionsElement.appendChild(deleteBtnElement);
 
          taskElement.appendChild(taskActionsElement);

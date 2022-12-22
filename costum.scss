@@ -6,7 +6,8 @@ $main-font-family: 'Kanit',
    sans-serif;
 
 html {
-   font-size: 100%;
+   //font-size: 100%;
+      // font-size: vw;
 }
 
 * {
@@ -15,37 +16,38 @@ html {
 }
 
 body {
-   zoom: 110%;
+   //zoom: 110%;
    background: $background_color ;
    
 }
 
 .tasks {
+   display: block;
    overflow: auto;
    z-index: 800;
    background: #f9f9f9;
    position: fixed;
-   bottom: 15.2vh;
+   //bottom: 15.2vh;
    width: 60vw;
-   height: 61.5%; //55.8vh;
+   height: 80%; //61.5%; //55.8vh;
    left: 50%;
    transform: translate(-50%, 0);
 
    border-radius: $canvass_border_radius ;
    border-style: solid;
-   border-width: 0.1vw; //2px;
+   border-width: 0.3vh; //2px;
    border-color: $nav_color; //#5E6060;
-
+   top: calc(9vh + calc(calc(2rem + 3.467vh)/2));
    .newtask {
       margin-left: 1.96vw; //42px;
-      margin-top: 1.40vh; //15px;
+      margin-top: 1.40vh; //1.40vh; //15px;
       display: flex;
       flex-direction: row;
       width: 95%;
-      height: 3.467vh; //54px;
-
+      height: calc(2rem + 3.467vh); //calc(2em+3.467vh); //54px;
+         //background-color: green;
       &:first-of-type {
-         margin-top: 5vh;
+         margin-top: calc(2rem + 3vh); //5vh;
       }
 
       .mycheckbox {
@@ -58,14 +60,13 @@ body {
 
       .text {
          color: $nav_color;
-         width: 100%;
+         width: 95%;
          background: $background_color;
          border-radius: 10px;
-         border-width: 0.1vw; //2px;
+         border-width: 0.3vh; //2px;
          border-color: #5F7682;
          text-indent: 2vw;
-         font-size: 1vw; //18px;
-
+      // font-size: 1em; //18px;
          &:focus {
             outline: none;
          }
@@ -77,20 +78,25 @@ body {
    }
 
    .actions {
-      position: relative;
-      display: flex;
-      margin-left: -100px;
-      margin-top: 5px;
+      //position: relative;
+         //display: flex;
+         margin-left: -15px;
+         background-color: #6A0136;
+         //margin-left: -100px;
+         //margin-top: 5px;
 
       .myButton {
          background-color: $background_color;
          border-style: none;
          margin-top: 0px;
+         
          transition: background ease-out 0.3s;
-         width: 35px;
-         height: 0px;
-         font-size: 1.5vh;
-         line-height: 1.5vh;
+         max-width: 15em;
+            width: 2vw;
+            height: calc(3.467vh/2);
+            //   right: 20px;
+            //     font-size: 1.5vh;
+            //line-height: 1.5vh;
       }
 
       .myButton:hover {
@@ -102,29 +108,29 @@ body {
       }
 
       .delete-btn {
-         position: relative;
-         background-color: #6A0136;
-         color: white;
-         padding-bottom: 3px;
-         border-radius: 10px;
-         margin-top: -16px;
-         width: 1.4vw; //30px;
-         height: 2.6vh; //30px;
-         font-weight: bold;
-         margin-left: 3.5px;
+            position: absolute;
+               // background-color: #6A0136;
+               // color: white;
+               // padding-bottom: 3px;
+               // border-radius: 10px;
+               // margin-top: -16px;
+               // width: 10.4vw; //30px;
+               // // height: 2.6vh; //30px;
+               // font-weight: bold;
+               // margin-left: 3.5px;
          visibility: hidden;
       }
 
       .check-btn {
-         font-weight: bold;
-         margin-bottom: -10px;
-         font-size: 20px;
-         border-style: solid;
-         color: #243B4A;
-         background-color: transparent;
-         border-radius: 10px;
-         margin-left: 50px;
-         visibility: hidden;
+   //       font-weight: bold;
+      //       margin-bottom: -10px;
+      // //      font-size: 20px;
+      //       border-style: solid;
+      //       color: #243B4A;
+      //       background-color: transparent;
+      //       border-radius: 10px;
+      //       margin-left: 50px;
+      //       visibility: hidden;
 
       }
 
@@ -164,12 +170,14 @@ body {
 }
 
 .bar {
+   
    z-index: 1000;
    position: fixed;
    display: flex;
-   margin-top: 15.8vh;
+   //margin-top: 9vh;
    width: 40vw;
    height: 5.1vh; //54px;
+   height: calc(2rem + 3.467vh);
    background: $background_color;
    left: 50%;
    transform: translate(-50%, 0);
@@ -177,23 +185,25 @@ body {
    display: flex;
    flex-direction: row;
    border-style: solid;
-   border-width: 0.1vw; // 2px;
+   border-width: 0.3vh; // 2px;
    border-color: $nav_color;
-
+   top: 9vh;
+      min-height: 3.5rem;
    .myButton {
       color: $nav_color;
-      font-size: 1.7vh; //18px;
+   //   font-size: 1.7vh; //18px;
       width: 50px;
       font-weight: bold;
       margin-right: 2vw; //20px;
-
+      min-height: 2rem;
+      
       &:hover {
          color: #5F7682;
       }
    }
 
    .plus-btn {
-      width: 4vw;
+      //width: 4vw;
    }
 
    .search-wrapper {
@@ -210,9 +220,9 @@ body {
          color: #243B4A;
          border-radius: 10px;
          border-style: none;
-         font-size: 2.1vh; //1.2vw;//1.
+   //      font-size: 2.1vh; //1.2vw;//1.
          text-indent: 3.5vw; // 35px;
-
+         min-height: 3.5rem;
          &:focus {
             outline: none;
          }
@@ -224,14 +234,14 @@ body {
          pointer-events: none;
          line-height: 2vh;
          background: transparent;
-
+         //background-color: red;
          text-indent: 3.5vw;
          padding-top: 3%;
          width: 100%;
-         font-size: 1.3rem;
+   //      font-size: 1.3rem;
          color: #5F7682;
-         font-size: 2.1vh;
-         line-height: 2vh;
+   //     font-size: 2.1vh;
+      // line-height: 2vh;
          position: absolute;
          right: -0.4%;
          bottom: 1.5vh;
@@ -271,30 +281,32 @@ input[required="required"]:valid+.req_placeholder {
 
    }
 }
-
+@media only screen and (max-width: 600px) {
+   
+}
 
 ///
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
    .bar {
-      // background-color: red;
+   // background-color: red;
       width: 60vw;
-
       .myButton {
-
          position: absolute;
          right: 0;
          top: 20%;
          width: 12vw;
          height: 3vh;
          line-height: 1rem;
-            font-size: 1rem; //1.9vh;
+         font-size: calc(1em + 1vw);
+            // font-size: 20em; //1.9vh;
       }
 
       .search-wrapper {
          .search {
             width: 76%;
-            font-size: 2.1vh; //3.4vw ;
+            //font-size: 2.1vh; //3.4vw ;
+               font-size: calc(1em + 1vw);
 
             &:focus {
                outline: none;
@@ -302,11 +314,12 @@ input[required="required"]:valid+.req_placeholder {
          }
 
          .req_placeholder {
-            font-size: 2.1vh;
-            line-height: 2vh;
+         // font-size: 2.1vh;
+            font-size: calc(1em + 1vw);
+            line-height: 3vh;
             position: absolute;
             right: -0.5%;
-            bottom: 1.5vh;
+            bottom: 1rem;
          }
 
       }
@@ -321,7 +334,7 @@ input[required="required"]:valid+.req_placeholder {
          width: 65vw;
 
          .text {
-            font-size: 2vh;
+         font-size: calc(1em + 3vw);
          }
       }
 
@@ -329,21 +342,22 @@ input[required="required"]:valid+.req_placeholder {
 
 
          .myButton {
-            position: absolute;
-            height: 2.5vh;
-            width: 4.5vw;
-            margin-left: 85px; //17vw;
-            font-size: 1.8vh;
-            line-height: 1.8vh;
-            bottom: 65%;
-            position: absolute;
-               height: 25px; //2.5vh;
-               width: 25px; //3.5vw;
-               margin-left: 82px; //17vw;
+            width: 4vw;
+               //    position: absolute;
+               //    height: 2.5vh;
+               //    width: 4.5vw;
+               //    margin-left: 85px; //17vw;
+               // //  font-size: 1.8vh;
+               //    line-height: 1.8vh;
+               //    bottom: 65%;
+               //    position: absolute;
+               //       height: 25px; //2.5vh;
+               //       width: 25px; //3.5vw;
+               //       margin-left: 82px; //17vw;
             
-               font-size: 1rem; //1.8vh;
-               line-height: 1rem; //1.8vh;
-               bottom: 65%;
+         //    // font-size: 1rem; //1.8vh;
+            //       line-height: 1rem; //1.8vh;
+            //       bottom: 65%;
          }
 
       }
@@ -355,38 +369,38 @@ input[required="required"]:valid+.req_placeholder {
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width:768px) {
+@media only screen and (min-width: 600px) {
    .bar {
-      //  background-color: red;
+      background-color: red;
       width: 60vw;
 
       .myButton {
-         position: absolute;
-         right: 0;
-         top: 20%;
-         width: 10vw;
-         height: 3vh;
-         line-height: 2vh;
-         font-size: 2vh;
-      }
+            position: absolute;
+               right: 0;
+               top: 20%;
+               width: 10vw;
+               height: 3vh;
+               line-height: 2vh;
+         //  font-size: 2vh;
+         }
 
       .search-wrapper {
          .search {
             //border:solid red;
             width: 78%;
-            font-size: 3.4vw;
-            font-size: 2.1vh;
+      //    font-size: 3.4vw;
+         //   font-size: 2.1vh;
          }
 
          .req_placeholder {
-            font-size: 2.1vh;
+         //  font-size: 2.1vh;
             line-height: 2vh;
             position: absolute;
             right: -0.5%;
             bottom: 1.5vh;
 
          }
-      }
+}
 
    }
 
@@ -394,61 +408,62 @@ input[required="required"]:valid+.req_placeholder {
       width: 75vw;
 
       .newtask {
-         margin-left: 5vw;
-         width: 65vw;
+            margin-left: 5vw;
+               width: 65vw;
 
          .text {
-            font-size: 1rem; //2.1vh;
-         }
-      }
+            // font-size: 1rem; //2.1vh;
+            }
+            }
 
       .actions {
          .myButton {
-            position: absolute;
-            height: 25px; //2.5vh;
-               width: 25px; //3.5vw;
-            margin-left: 82px; //17vw;
+         //    position: absolute;
+            //    height: 25px; //2.5vh;
+            //       width: 25px; //3.5vw;
+            //    margin-left: 82px; //17vw;
 
-            font-size: 1rem; //1.8vh;
-               line-height: 1rem; //1.8vh;
-            bottom: 65%;
+         // //  font-size: 1rem; //1.8vh;
+            //       line-height: 1rem; //1.8vh;
+            //    bottom: 65%;
          }
-      }
-   }
+         }
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width:992px) {
+@media only screen and (min-width: 768px) {
    .bar {
-      //background-color: red;
+      background-color: $background_color;
       width: 60vw;
 
       .myButton {
-         position: absolute;
-         right: 0;
-         top: 20%;
-         width: 10vw;
-         height: 3vh;
-         line-height: 2vh;
-         font-size: 2vh;
-      }
+            position: absolute;
+               right: 0;
+               top: 20%;
+               width: 12vw;
+                  height: 3vh;
+                  line-height: 2vh;
+               font-size: calc(2em + 0.1vw);
+                  //  font-size: 2vh;
+               }
 
       .search-wrapper {
          .search {
-            width: 78%;
-            font-size: 2.1vh;
+            width: 75%;
+               font-size: calc(2em + 0.1vw);
+               //    font-size: 2.1vh;
          }
 
          .req_placeholder {
-            font-size: 2.1vh;
-            line-height: 2vh;
+            font-size: calc(2em + 0.1vw);
+               line-height: 3vh;
             position: absolute;
             right: -0.5%;
-            bottom: 1.5vh;
+            bottom: 1.2rem;
 
          }
-      }
+}
 
    }
 
@@ -456,23 +471,33 @@ input[required="required"]:valid+.req_placeholder {
       width: 75vw;
 
       .newtask {
-         margin-left: 5vw;
-         width: 65vw;
+            margin-left: 5vw;
+               width: 65vw;
 
          .text {
-            font-size: 2.1vh;
-         }
-      }
+            font-size: calc(1rem + 2vw);
+               // font-size: 2.1vh;
+            }
+            }
 
       .actions {
+         
          .myButton {
-            position: absolute;
-            height: 2.5vh;
-            width: 3vw;
-            margin-left: 85px;
-            font-size: 1.8vh;
-            line-height: 1rem; //1.8vh;
-            bottom: 65%;
+         margin-top: -1.2vh;
+            margin-left: -20px;
+            width: calc(5vw + 1rem);
+            height: calc(2vh + 1rem);
+            font-size: calc(1vw + 1vh);
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #f9f9f9;
+            //    position: absolute;
+            //       height: 2.5vh;
+            //       width: 3vw;
+            //       margin-left: 85px;
+            // //   font-size: 1.8vh;
+            //    line-height: 1rem; //1.8vh;
+            //    bottom: 65%;
             //17vw;
          }
       }
@@ -480,30 +505,30 @@ input[required="required"]:valid+.req_placeholder {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width:1200px) {
+@media only screen and (min-width: 992px) {
    .bar {
-      // background-color: red;
+      background-color: blue;
       width: 60vw;
 
       .myButton {
-         position: absolute;
-         right: 0;
-         top: 20%;
-         width: 10vw;
-         height: 3vh;
-         line-height: 2vh;
-         font-size: 2vh;
-      }
+            position: absolute;
+               right: 0;
+               top: 20%;
+               width: 10vw;
+               height: 3vh;
+               line-height: 2vh;
+         //  font-size: 2vh;
+         }
 
       .search-wrapper {
          .search {
             width: 78%;
-            font-size: 3.4vw;
-            font-size: 2.1vh;
+   //        font-size: 3.4vw;
+      //       font-size: 2.1vh;
          }
 
          .req_placeholder {
-            font-size: 2.1vh;
+   //       font-size: 2.1vh;
             line-height: 2.1vh;
             position: absolute;
             right: -0.4%;
@@ -517,28 +542,28 @@ input[required="required"]:valid+.req_placeholder {
       width: 75vw;
 
       .newtask {
-         margin-left: 5vw;
-         width: 65vw;
+            margin-left: 5vw;
+               width: 65vw;
 
          .text {
-            font-size: 2.1vh;
-         }
-      }
+            //  font-size: 2.1vh;
+            }
+            }
 
       .actions {
          .myButton {
-            position: absolute;
-            height: 2.5vh;
-            width: 3vw;
-            margin-left: 85px;
-            font-size: 1.8vh;
-            line-height: 1.8vh;
-            bottom: 65%; //17vw;
+         //    position: absolute;
+            //    height: 2.5vh;
+            //    width: 3vw;
+            //    margin-left: 85px;
+            // // font-size: 1.8vh;
+            //    line-height: 1.8vh;
+            //    bottom: 65%; //17vw;
          }
       }
    }
 }
-
+}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 // @media only screen and (min-width: 1200px) {
 //    .bar {
