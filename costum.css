@@ -275,7 +275,7 @@ input[required=required]:valid + .req_placeholder {
     width: 65vw;
   }
   .tasks .newtask .text {
-    font-size: 18px;
+    font-size: calc(10px + 1vh);
   }
   /* Medium devices (landscape tablets, 768px and up) */
   /* Large devices (laptops/desktops, 992px and up) */
@@ -313,7 +313,7 @@ input[required=required]:valid + .req_placeholder {
     width: 65vw;
   }
   .tasks .newtask .text {
-    font-size: 20px;
+    font-size: calc(10px + 1vh);
   }
 }
 @media only screen and (min-width: 600px) and (min-width: 992px) {
@@ -348,7 +348,7 @@ input[required=required]:valid + .req_placeholder {
     width: 65vw;
   }
   .tasks .newtask .text {
-    font-size: 22px;
+    font-size: calc(10px + 1vh);
   }
   .tasks .actions .myButton {
     line-height: 2px;
