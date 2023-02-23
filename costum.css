@@ -153,6 +153,7 @@ body {
   border-style: none;
   text-indent: 3.5vw;
   min-height: 3.5rem;
+  caret-color: transparent;
 }
 .bar .search-wrapper .search:focus {
   outline: none;
@@ -302,7 +303,7 @@ input[required=required]:valid + .req_placeholder {
     font-size: 25px;
     line-height: 3vh;
     position: absolute;
-    right: -0.5%;
+    right: -1vw;
     bottom: calc(2.3rem - 2vw);
   }
   .tasks {
