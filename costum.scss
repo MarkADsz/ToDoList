@@ -305,13 +305,13 @@ input[required="required"]:valid+.req_placeholder {
          width: 12vw;
          height: 3vh;
          line-height: 1rem;
-         font-size: 15px;
+         font-size: 18px;
       }
 
       .search-wrapper {
          .search {
             width: 76%;
-               font-size: 15px;
+               font-size: 18px;
 
             &:focus {
                outline: none;
@@ -319,7 +319,7 @@ input[required="required"]:valid+.req_placeholder {
          }
 
          .req_placeholder {
-            font-size: 15px;
+            font-size: 18px;
             line-height: 3vh;
             position: absolute;
             right: -0.5%;
@@ -362,7 +362,7 @@ input[required="required"]:valid+.req_placeholder {
 @media only screen and (min-width: 600px) {
    .bar {
       width: 60vw;
-
+      
       .myButton {
                position: absolute;
                right: 0;
@@ -370,19 +370,19 @@ input[required="required"]:valid+.req_placeholder {
                width: 10vw;
                height: 3vh;
                line-height: 2vh;
-               font-size: 18px;
+               font-size: 20px;
          }
 
       .search-wrapper {
       
          .search {
-            font-size: 18px;
+            font-size: 20px;
             width: 78%;
      
          }
 
          .req_placeholder {
-            font-size: 18px;
+            font-size: 20px;
             line-height: 3vh;
             position: absolute;
             right: -0.5%;
@@ -427,22 +427,22 @@ input[required="required"]:valid+.req_placeholder {
                width: 12vw;
                height: 3vh;
                line-height: 2vh;
-               font-size: 20px;
+               font-size: 25px;
                }
 
       .search-wrapper {
          .search {
             width: 75%;
-            font-size: 20px;
+            font-size: 25px;
              
          }
 
          .req_placeholder {
-            font-size: 20px;
+            font-size: 25px;
             line-height: 3vh;
             position: absolute;
             right: -0.5%;
-            bottom: calc(1.48rem - 1vh);
+            bottom: calc(2.3rem - 2vw);
 
          }
 }
