@@ -1,22 +1,17 @@
 $background_color: #FFFCF8;
 $canvass_border_radius: 21px;
-$bar-radius: 17.44px; //3.14234vw;//17.44px;
+$bar-radius: 17.44px;
 $nav_color: #243B4A;
 $main-font-family: 'Kanit',
    sans-serif;
 
-html {
-   //font-size: 100%;
-      // font-size: vw;
-}
+
 
 * {
-   //Courier New
    font-family: $main-font-family, Courier, monospaces;
 }
 
 body {
-   //zoom: 110%;
    background: $background_color ;
    
 }
@@ -27,27 +22,26 @@ body {
    z-index: 800;
    background: #f9f9f9;
    position: fixed;
-   //bottom: 15.2vh;
    width: 60vw;
-   height: 80%; //61.5%; //55.8vh;
+   height: 80%; 
    left: 50%;
    transform: translate(-50%, 0);
 
    border-radius: $canvass_border_radius ;
    border-style: solid;
-   border-width: 0.3vh; //2px;
-   border-color: $nav_color; //#5E6060;
+   border-width: 0.3vh; 
+   border-color: $nav_color; 
    top: calc(9vh + calc(calc(2rem + 3.467vh)/2));
    .newtask {
-      margin-left: 1.96vw; //42px;
-      margin-top: 1.40vh; //1.40vh; //15px;
+      margin-left: 1.96vw; 
+      margin-top: 1.40vh; 
       display: flex;
       flex-direction: row;
       width: 95%;
-      height: calc(2rem + 3.467vh); //calc(2em+3.467vh); //54px;
-         //background-color: green;
+      height: calc(2rem + 3.467vh); 
+
       &:first-of-type {
-         margin-top: calc(2rem + 3vh); //5vh;
+         margin-top: calc(2rem + 3vh); 
       }
 
       .mycheckbox {
@@ -63,7 +57,7 @@ body {
          width: 95%;
          background: $background_color;
          border-radius: 10px;
-         border-width: 0.3vh; //2px;
+         border-width: 0.3vh; 
          border-color: #5F7682;
          text-indent: 2vw;
          &:focus {
@@ -77,12 +71,8 @@ body {
    }
 
    .actions {
-      //position: relative;
-         //display: flex;
          margin-left: -15px;
          background-color: #6A0136;
-         //margin-left: -100px;
-         //margin-top: 5px;
 
       .myButton {
          background-color: $background_color;
@@ -113,29 +103,11 @@ body {
       }
 
       .delete-btn {
-            position: absolute;
-               // background-color: #6A0136;
-               // color: white;
-               // padding-bottom: 3px;
-               // border-radius: 10px;
-               // margin-top: -16px;
-               // width: 10.4vw; //30px;
-               // // height: 2.6vh; //30px;
-               // font-weight: bold;
-               // margin-left: 3.5px;
+         position: absolute;
          visibility: hidden;
       }
 
       .check-btn {
-   //       font-weight: bold;
-      //       margin-bottom: -10px;
-      // //      font-size: 20px;
-      //       border-style: solid;
-      //       color: #243B4A;
-      //       background-color: transparent;
-      //       border-radius: 10px;
-      //       margin-left: 50px;
-      //       visibility: hidden;
 
       }
 
@@ -179,9 +151,8 @@ body {
    z-index: 1000;
    position: fixed;
    display: flex;
-   //margin-top: 9vh;
    width: 40vw;
-   height: 5.1vh; //54px;
+   height: 5.1vh; 
    height: calc(2rem + 3.467vh);
    background: $background_color;
    left: 50%;
@@ -190,16 +161,15 @@ body {
    display: flex;
    flex-direction: row;
    border-style: solid;
-   border-width: 0.3vh; // 2px;
+   border-width: 0.3vh; 
    border-color: $nav_color;
    top: 9vh;
       min-height: 3.5rem;
    .myButton {
       color: $nav_color;
-   //   font-size: 1.7vh; //18px;
       width: 50px;
       font-weight: bold;
-      margin-right: 2vw; //20px;
+      margin-right: 2vw;
       min-height: 2rem;
       
       &:hover {
@@ -207,9 +177,7 @@ body {
       }
    }
 
-   .plus-btn {
-      //width: 4vw;
-   }
+  
 
    .search-wrapper {
       margin: auto;
@@ -219,14 +187,13 @@ body {
       .search {
          position: relative;
          width: 100%;
-         height: 4.3vh; //42px;
+         height: 4.3vh;
          background: $background_color;
          background-color: transparent;
          color: #243B4A;
          border-radius: 10px;
          border-style: none;
-   //      font-size: 2.1vh; //1.2vw;//1.
-         text-indent: 3.5vw; // 35px;
+         text-indent: 3.5vw; 
          min-height: 3.5rem;
          caret-color: transparent;
          &:focus {
@@ -247,7 +214,6 @@ body {
          position: absolute;
          right: -0.4%;
          bottom: 1.5vh;
-
          font-size: 15px;
          line-height: 3vh;
          position: absolute;
@@ -275,8 +241,8 @@ input[required="required"]:valid+.req_placeholder {
 }
 
 .myButton {
-   width: 3vw; //42px;
-   height: 4vh; //42px;
+   width: 3vw; 
+   height: 4vh; 
    background: $background_color;
    margin: auto;
    border-radius: 15px;
@@ -296,7 +262,6 @@ input[required="required"]:valid+.req_placeholder {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
    .bar {
-   // background-color: red;
       width: 60vw;
       .myButton {
          position: absolute;
@@ -340,16 +305,6 @@ input[required="required"]:valid+.req_placeholder {
          .text {
          font-size: 15px;
          }
-      }
-
-      .actions {
-
-
-         .myButton {
-            
-               
-         }
-
       }
 
    }
@@ -402,15 +357,8 @@ input[required="required"]:valid+.req_placeholder {
 
          .text {
             font-size: calc(10px + 1vh);
-            
             }
             }
-
-      .actions {
-         .myButton {
-   
-         }
-         }
 
 }
 
@@ -462,31 +410,7 @@ input[required="required"]:valid+.req_placeholder {
             }
             }
 
-      .actions {
-         
-         .myButton {
-            // margin-top: -1.2vh;
-            // margin-left: -20px;
-            // width: calc(5vw + 1rem);
-            // height: calc(2vh + 1rem);
-            // font-size: calc(1vw + 1vh);
-            
-            // margin-bottom: 2rem;
-            // text-align: center;
-            // color: #f9f9f9;
-
-
-
-            //    position: absolute;
-            //       height: 2.5vh;
-            //       width: 3vw;
-            //       margin-left: 85px;
-            // //   font-size: 1.8vh;
-            //    line-height: 1rem; //1.8vh;
-            //    bottom: 65%;
-            //17vw;
-         }
-      }
+      
    }
 }
 
